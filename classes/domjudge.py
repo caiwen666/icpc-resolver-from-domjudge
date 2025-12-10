@@ -258,7 +258,7 @@ class DOMjudge:
     def resolver_award_formatter(self):
         return reduce(lambda x, y: x + y, [
             self.resolver_award_winner_formatter(),
-            self.resolver_award_top_team_formatter(3),
+            self.resolver_award_top_team_formatter(self.config['top_team_rank']),
             self.resolver_award_medal_formatter(),
             self.resolver_award_best_girl_formatter(),
             self.resolver_award_first_solved_formatter(),

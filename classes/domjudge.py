@@ -354,7 +354,7 @@ class DOMjudge:
             buf[row['rank'] - 1].append(row['team_id'])
         winner_award = []
         for _, team_ids in enumerate(buf):
-            winner_award.append(self.award(f'winner', 'World Champion', team_ids))
+            winner_award.append(self.award(f'winner', 'Contest Winner', team_ids))
         return winner_award
 
     def resolver_award_best_girl_formatter(self):

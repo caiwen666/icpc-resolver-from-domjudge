@@ -329,7 +329,7 @@ class DOMjudge:
             if first_solved[idx]:
                 continue
             first_solved[idx] = True
-            first_solved_award.append(self.award('first-to-solve-%s' % str(pid), 'First to solve problem %c' % chr(65 + idx), submission['team_id']))
+            first_solved_award.append(self.award('first-to-solve-%s' % str(pid), 'First to Solve Problem %c' % chr(65 + idx), submission['team_id']))
         return first_solved_award
 
     def resolver_award_top_team_formatter(self, rank):
@@ -372,10 +372,10 @@ class DOMjudge:
         medal_team_award = []
         button_rank = 0
         medals = [
-            (self.config['gold'], "gold-medal", "Gold medal winner", True, "Gold Winner", self.config['gold_show_list']),
-            (self.config['silver'], "silver-medal", "Silver medal winner", True, "Silver Winner", self.config['silver_show_list']),
-            (self.config['bronze'], "bronze-medal", "Bronze medal winner", True, "Bronze Winner", self.config['bronze_show_list']),
-            (99999999, "honors-metion", "Honorable mention", False, "Honorable Mention", self.config['honors_show_list'])
+            (self.config['gold'], "gold-medal", "Gold Medal Winner", True, "Gold Winner", self.config['gold_show_list']),
+            (self.config['silver'], "silver-medal", "Silver Medal Winner", True, "Silver Winner", self.config['silver_show_list']),
+            (self.config['bronze'], "bronze-medal", "Bronze Medal Winner", True, "Bronze Winner", self.config['bronze_show_list']),
+            (99999999, "honors-metion", "Honorable Mention", False, "Honorable Mention", self.config['honors_show_list'])
         ]
         pos = 0
         pos_up = len(self.scoreboard['rows'])

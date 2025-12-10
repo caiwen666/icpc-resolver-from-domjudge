@@ -45,8 +45,9 @@ A tools to generate xml file of icpc-resolver via domjudge RESTful API.
   "honors_show_list": true/false,
   "no_occupy_award_categories": [<group_id1>, <group_id2>, ...],
   "award_best_girl": [<group_id1>],
-  "honors_show_citation": true,
-  "top_team_rank": <the rank of top team>
+  "honors_show_citation": true/false,
+  "top_team_rank": <the rank of top team>,
+  "first_wa": true/false
 }
 ```
 
@@ -59,6 +60,8 @@ A tools to generate xml file of icpc-resolver via domjudge RESTful API.
 - `honors_show_citation` 表示是否给铁牌获奖者也显示 citation
 
 - `top_team_rank` 表示给前多少名的队伍的获奖信息上写排名
+
+- `first_wa` 表示是否颁发第一个 wa 奖
 
 #### example
 ```jsonld
@@ -77,7 +80,8 @@ A tools to generate xml file of icpc-resolver via domjudge RESTful API.
   "no_occupy_award_categories": ["18", "20"],
   "award_best_girl": ["11"],
   "honors_show_citation": true,
-  "top_team_rank": 3
+  "top_team_rank": 3,
+  "first_wa": false
 ```
 2. run main.py
 ```
@@ -119,6 +123,9 @@ Resolver 2.5版的`CDP`目录格式如下：
 
 * 可以设置给铁牌获奖者也显示 citation
 * 可以设置给排名为前多少名的队伍显示排名信息
+* 更改第一名的 citation
+* citation 全部改为大写
+* 增加可以设置 first wa
 
 ### 2025.05.11
 

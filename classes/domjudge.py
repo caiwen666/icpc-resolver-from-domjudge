@@ -256,15 +256,17 @@ class DOMjudge:
         } for submission in self.submissions ]
 
     def resolver_award_formatter(self):
-        return reduce(lambda x, y: x + y, [
+        tmp = [
             self.resolver_award_winner_formatter(),
             self.resolver_award_top_team_formatter(self.config['top_team_rank']),
             self.resolver_award_medal_formatter(),
             self.resolver_award_best_girl_formatter(),
             self.resolver_award_first_solved_formatter(),
             self.resolver_award_last_AC_formatter()
-            # self.resolver_award_first_WA()
-        ], [])
+        ]
+        if self.config['first_wa']:
+            tmp.append(self.resolver_award_first_WA())
+        return reduce(lambda x, y: x + y, tmp, [])
 
     def award(self, id, citation, team_ids):
         if type(team_ids) != list:

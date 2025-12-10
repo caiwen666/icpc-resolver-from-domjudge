@@ -10,6 +10,7 @@ A tools to generate xml file of icpc-resolver via domjudge RESTful API.
 - 金牌队伍
 - 银牌队伍
 - 铜牌队伍
+- 铁牌队伍
 - 最佳女队奖
 - 正式队伍的一血奖
 - 顽强拼搏奖
@@ -43,7 +44,8 @@ A tools to generate xml file of icpc-resolver via domjudge RESTful API.
   "bronze_show_list": true/false,
   "honors_show_list": true/false,
   "no_occupy_award_categories": [<group_id1>, <group_id2>, ...],
-  "award_best_girl": [<group_id1>]
+  "award_best_girl": [<group_id1>],
+  "honors_show_citation": true
 }
 ```
 
@@ -52,6 +54,8 @@ A tools to generate xml file of icpc-resolver via domjudge RESTful API.
 - `no_occupy_award_categories`表示给位于牌区的打星队也能够展示图片（赋予`Star Team`的奖项）。
 
 - 打星选手不参与一血奖。
+
+- `honors_show_citation` 表示是否给铁牌获奖者也显示 citation
 
 #### example
 ```jsonld
@@ -68,7 +72,8 @@ A tools to generate xml file of icpc-resolver via domjudge RESTful API.
   "bronze_show_list": true,
   "honors_show_list": true,
   "no_occupy_award_categories": ["18", "20"],
-  "award_best_girl": ["11"]
+  "award_best_girl": ["11"],
+  "honors_show_citation": true
 ```
 2. run main.py
 ```
@@ -105,6 +110,10 @@ Resolver 2.5版的`CDP`目录格式如下：
 ``` 
 
 ## 更新log
+
+### 2025.12.10 (By Caiwen)
+
+* 可以设置给铁牌获奖者也显示 citation
 
 ### 2025.05.11
 

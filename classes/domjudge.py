@@ -395,7 +395,7 @@ class DOMjudge:
                 buf.append(row['team_id'])
                 pos += 1
 
-            if give_medal and buf:
+            if buf and (give_medal or self.config['honors_show_citation']):
                 medal_team_award.append(self.award(id, citation, buf))
             if show_as_list and buf:
                 medal_team_award.append(self.award_as_list(id + "_list", list_citation, buf))
